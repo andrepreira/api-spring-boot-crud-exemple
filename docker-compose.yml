@@ -5,12 +5,13 @@ services:
     container_name: postgres_container
     image: postgres:14.1-alpine
     environment:
+      POSTGRES_DB: db_api-spring-boot-crud-exemple
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       PGDATA: /data/postgres
     volumes:
        - .docker:/data/postgres
     ports:
-      - "5432:5432"
+      - "5431:5432"
 volumes:
     postgres:
